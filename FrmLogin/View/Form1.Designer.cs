@@ -105,7 +105,7 @@
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtPassword.BackColor = System.Drawing.Color.DarkCyan;
-            this.txtPassword.Font = new System.Drawing.Font("PF Encore Sans Pro Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("PF Encore Sans Pro Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(57, 3);
             this.txtPassword.Multiline = true;
@@ -143,7 +143,7 @@
             // 
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtUser.BackColor = System.Drawing.Color.DarkCyan;
-            this.txtUser.Font = new System.Drawing.Font("PF Encore Sans Pro Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Font = new System.Drawing.Font("PF Encore Sans Pro Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.White;
             this.txtUser.Location = new System.Drawing.Point(59, 3);
             this.txtUser.Multiline = true;

@@ -9,3 +9,4 @@ F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.exe
 F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.pdb
 F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.FrmLogin.resources
 F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\bin\Debug\MySql.Data.dll
+F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.Form2.resources

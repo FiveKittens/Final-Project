@@ -44,9 +44,9 @@ namespace FrmLogin
                 }
                 else
                 {
-                    /*Form1 f = new Form1();
-                    f.Show();*/
-                    MessageBox.Show("Login Sukses");
+                    Form2 f = new Form2();
+                    f.Show();
+                    /*MessageBox.Show("Login Sukses");*/
                     this.Hide();
                 }
             }
