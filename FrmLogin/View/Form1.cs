@@ -14,10 +14,10 @@ namespace FrmLogin
     {
         private Boolean status;
         private Entity.EntLogin login;
-        private Implement.ImpLogin impLogin;
+        private Interface.IntLogin Login;
         public FrmLogin()
         {
-            impLogin = new Implement.ImpLogin();
+            Login = Factory.FactLogin.GetInterfaceLogin();
             login = new Entity.EntLogin();
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace FrmLogin
                 login.setKode(txtUser.Text);
                 login.setPassword(txtPassword.Text);
 
-                status = impLogin.Login(login);
+                status = Login.Login(login);
 
                 if (status == false)
                 {

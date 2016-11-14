@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\EntLogin.cs" />
+    <Compile Include="Factory\FactLogin.cs" />
     <Compile Include="Implement\ImpLogin.cs" />
     <Compile Include="Interface\IntLogin.cs" />
     <Compile Include="KoneksiDB\Koneksi.cs" />
