@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data;
+using System.Data.SqlClient;
 
 namespace FrmLogin.KoneksiDB
 {
     class Koneksi
     {
-        public static MySqlConnection getKoneksi()
+        private static SqlConnection koneksi;
+        public static SqlConnection getKoneksi()
         {
-            string strCon = "SERVER = localhost; PORT = 3306; " +
-                        "UID = root; PWD = ; " +
-                        "DATABASE = db_psb9279;";
-            return new MySqlConnection(strCon);
+            koneksi = new SqlConnection();
+            koneksi.ConnectionString = "Data Source=XENOM_PC;Initial Catalog=db_pemilu9279;Integrated Security=True"; 
+            return koneksi;
         }
     }
 }

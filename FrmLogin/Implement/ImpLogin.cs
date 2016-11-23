@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace FrmLogin.Implement
 {
@@ -11,29 +11,29 @@ namespace FrmLogin.Implement
     {
         private string query;
         private Boolean status;
-        private MySqlConnection koneksi;
+        private SqlConnection koneksi;
 
         public ImpLogin()
         {
             koneksi = KoneksiDB.Koneksi.getKoneksi();
         }
 
-        public Boolean Login(Entity.EntLogin e)
+        public Boolean Login(String kode, String password)
         {
 
-            query = "SELECT id_staff, password FROM tb_staff " +
-                    "WHERE id_staff = '" + e.getKode() + "' AND password = '" + e.getPassword() + "'";
+            query = "SELECT id_staff, password FROM tb_admin " +
+                    "WHERE id_staff = '" + kode + "' AND password = '" + password + "'";
 
             koneksi.Open();
 
-            MySqlCommand command = koneksi.CreateCommand();
+            SqlCommand command = koneksi.CreateCommand();
             command.CommandText = query;
-            MySqlDataReader reader = command.ExecuteReader();
+            SqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
-                if ((reader.GetString(0).ToString() == e.getKode())
-                    && (reader.GetString(1).ToString() == e.getPassword()))
+                if ((reader.GetString(0).ToString() == kode)
+                    && (reader.GetString(1).ToString() == password))
                 {
                     status = true;
                 }

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace FrmLogin.Interface
 {
-    interface IntLogin
+    interface IntCalon
     {
-        Boolean Login(String kode, String password);
+        Boolean submitCalon(Entity.EntCalon e);
+        int nomorBaru();
     }
 }

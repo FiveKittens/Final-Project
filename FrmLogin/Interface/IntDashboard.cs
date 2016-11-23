@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace FrmLogin.Interface
 {
-    interface IntLogin
+    interface IntDashboard
     {
-        Boolean Login(String kode, String password);
+        Boolean Dashboard(String user);
+        Boolean Dashboard(String nama);
     }
 }

@@ -13,12 +13,10 @@ namespace FrmLogin
     public partial class FrmLogin : Form
     {
         private Boolean status;
-        private Entity.EntLogin login;
         private Interface.IntLogin Login;
         public FrmLogin()
         {
             Login = Factory.FactLogin.GetInterfaceLogin();
-            login = new Entity.EntLogin();
             InitializeComponent();
         }
 
@@ -30,10 +28,7 @@ namespace FrmLogin
             }
             else
             {
-                login.setKode(txtUser.Text);
-                login.setPassword(txtPassword.Text);
-
-                status = Login.Login(login);
+                status = Login.Login(txtUser.Text, txtPassword.Text);
 
                 if (status == false)
                 {
@@ -44,7 +39,7 @@ namespace FrmLogin
                 }
                 else
                 {
-                    Form2 f = new Form2();
+                    View.Form4 f = new View.Form4();
                     f.Show();
                     /*MessageBox.Show("Login Sukses");*/
                     this.Hide();
