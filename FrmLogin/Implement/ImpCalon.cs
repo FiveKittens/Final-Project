@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace FrmLogin.Implement
 {
@@ -12,61 +13,66 @@ namespace FrmLogin.Implement
         private string query;
         private Boolean status;
         private SqlConnection koneksi;
-        private SqlCommand command;
-
         public ImpCalon()
         {
             koneksi = KoneksiDB.Koneksi.getKoneksi();
         }
 
         //Submit Data
-        public Boolean submitCalon(Entity.EntCalon e)
+        public Boolean submitCalon(String kode, String nama, String partai)
         {
             status = false;
             try
             {
-                query = "INSERT INTO tb_pekerjaan VALUES ('"
-                    + e.getNomor() + "','"
-                    + e.getNama() + "','"
-                    + e.getPartai() + "')";
+                query = "INSERT INTO tb_calon VALUES ('"
+                    + kode + "','"
+                    + nama + "','"
+                    + partai + "')";
                 koneksi.Open();
-                command = new SqlCommand();
-                command.Connection = koneksi;
+                SqlCommand command = koneksi.CreateCommand();
                 command.CommandText = query;
                 command.ExecuteNonQuery();
                 status = true;
                 koneksi.Close();
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
-                Console.WriteLine("ERROR");
+                Console.WriteLine("ERROR" + ex.Message);
             }
             return status;
         }
 
         //Buat Nomor Urut Calon
-        public int nomorBaru()
+        public String nomorBaru()
         {
-            int kode = 1;
+            int kode = 0;
+            string kodeBaru = "";
             try
             {
-                query = "SELECT MAX(nomr_calon) FROM tb_calon";
+                query = "SELECT MAX(nomor_calon) FROM tb_calon";
                 koneksi.Open();
-                command = new SqlCommand();
-                command.Connection = koneksi;
+                SqlCommand command = koneksi.CreateCommand();
                 command.CommandText = query;
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    kode = reader.GetInt32(0) + 1;
+                    kode = Int16.Parse(reader.GetString(0).ToString());
+                    if(kode < 10)
+                    {
+                        kodeBaru = "0" + (kode + 1);
+                    }
+                    else
+                    {
+                        kodeBaru = "" + (kode + 1);
+                    }
                 }
                 koneksi.Close();
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
-                Console.WriteLine("ERROR");
+                Console.WriteLine("ERROR" + ex.Message);
             }
-            return kode;
+            return kodeBaru;
         }
     }
 }

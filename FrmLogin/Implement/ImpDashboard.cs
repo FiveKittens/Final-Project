@@ -10,24 +10,38 @@ namespace FrmLogin.Implement
     class ImpDashboard : Interface.IntDashboard
     {
         private string query;
-        private Boolean status;
+        private string nama;
         private SqlConnection koneksi;
-        private SqlCommand command;
 
         public ImpDashboard()
         {
             koneksi = KoneksiDB.Koneksi.getKoneksi();
         }
 
-        public Boolean Dashboard(String user)
+        public String Nama(String user)
         {
-            query = "SELECT id_staff" +
-                    "WHERE id_staff = '" + user +"'";
-        }
-        public Boolean Dashboard(String nama)
-        {
-            query = "SELECT id_staff" +
-                    "WHERE id_staff = '" + nama + "'";
+            
+            try
+            {
+                query = "SELECT nama_staff FROM tb_admin " +
+                        "WHERE id_staff = '" + user + "'";
+
+                koneksi.Open();
+
+                SqlCommand command = koneksi.CreateCommand();
+                command.CommandText = query;
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                   nama = reader.GetString(0).ToString();
+                }
+                koneksi.Close();
+            }catch (SqlException se)
+            {
+                Console.WriteLine("ERROR" + se);
+            }
+            return nama;
         }
     }
 }

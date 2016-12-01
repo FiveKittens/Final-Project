@@ -9,7 +9,8 @@ namespace FrmLogin.Factory
     class FactLogin
     {
         private static Interface.IntLogin Login;
-        private static Interface.IntCalon submitCalon;
+        private static Interface.IntCalon Calon;
+        private static Interface.IntDashboard Dashboard;
 
         public static Interface.IntLogin GetInterfaceLogin()
         {
@@ -17,10 +18,18 @@ namespace FrmLogin.Factory
             return Login;
         }
 
-        public static Interface.IntCalon GetInterfacesubmitCalon()
+        public static Interface.IntCalon GetInterfaceCalon()
         {
-            submitCalon = new Implement.ImpCalon();
-            return submitCalon;
+            Calon = new Implement.ImpCalon();
+            return Calon;
         }
+
+        public static Interface.IntDashboard GetInterfaceDashboard()
+        {
+            Dashboard = new Implement.ImpDashboard();
+            return Dashboard;
+        }
+        
+        
     }
 }

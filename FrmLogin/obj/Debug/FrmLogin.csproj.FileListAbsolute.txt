@@ -9,5 +9,5 @@ F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.View.Form3
 F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.csproj.GenerateResource.Cache
 F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.exe
 F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.pdb
-F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.csprojResolveAssemblyReference.cache
 F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.View.Form4.resources
+F:\Data Kuliah\Materi PL\Project\FrmLogin\FrmLogin\obj\Debug\FrmLogin.View.Form5.resources

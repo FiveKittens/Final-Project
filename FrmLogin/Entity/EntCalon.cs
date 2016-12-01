@@ -10,6 +10,7 @@ namespace FrmLogin.Entity
         private int nomor;
         private string nama;
         private string partai;
+        private string pict;
 
         public void SetNomor(int nomor)
         {
@@ -23,6 +24,10 @@ namespace FrmLogin.Entity
         {
             this.partai = partai;
         }
+        public void SetPict(string pict)
+        {
+            this.pict = pict;
+        }
         public int getNomor()
         {
             return nomor;
@@ -34,6 +39,10 @@ namespace FrmLogin.Entity
         public string getPartai()
         {
             return partai;
+        }
+        public string getPict()
+        {
+            return pict;
         }
     }
 }

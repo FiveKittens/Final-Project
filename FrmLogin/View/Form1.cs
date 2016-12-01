@@ -39,9 +39,10 @@ namespace FrmLogin
                 }
                 else
                 {
-                    View.Form4 f = new View.Form4();
-                    f.Show();
-                    /*MessageBox.Show("Login Sukses");*/
+                    Form2 f2 = new Form2(txtUser.Text);
+                    View.Form3 f3 = new View.Form3(txtUser.Text);
+                    View.Form4 f4 = new View.Form4(txtUser.Text);
+                    f4.Show();
                     this.Hide();
                 }
             }

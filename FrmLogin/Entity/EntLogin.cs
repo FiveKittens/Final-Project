@@ -10,6 +10,7 @@ namespace FrmLogin.Entity
     {
         private string kode;
         private string password;
+        private string nama;
 
         public void setKode(string kode)
         {
@@ -20,7 +21,11 @@ namespace FrmLogin.Entity
         {
             this.password = password;
         }
-
+        
+        public void setNama(string nama)
+        {
+            this.nama = nama;
+        }
         public string getKode()
         {
             return kode;
@@ -29,6 +34,10 @@ namespace FrmLogin.Entity
         public string getPassword()
         {
             return password;
+        }
+        public string getNama()
+        {
+            return nama;
         }
     }
 }

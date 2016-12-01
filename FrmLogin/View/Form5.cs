@@ -8,14 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmLogin
+namespace FrmLogin.View
 {
-    public partial class Form2 : Form
+    public partial class Form5 : Form
     {
-        private string user;
-        public Form2(string userid)
+        public Form5()
         {
-            user = userid;
             InitializeComponent();
         }
     }

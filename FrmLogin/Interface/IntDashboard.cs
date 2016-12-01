@@ -8,7 +8,6 @@ namespace FrmLogin.Interface
 {
     interface IntDashboard
     {
-        Boolean Dashboard(String user);
-        Boolean Dashboard(String nama);
+       String Nama(String user);
     }
 }
