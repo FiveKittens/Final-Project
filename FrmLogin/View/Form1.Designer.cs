@@ -116,6 +116,7 @@
             this.txtPassword.Size = new System.Drawing.Size(252, 44);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // tableLayoutPanel1
             // 

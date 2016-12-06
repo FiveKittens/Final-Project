@@ -9,7 +9,9 @@ namespace FrmLogin.Interface
 {
     interface IntCalon
     {
-        Boolean submitCalon(String kode, String nama, String partai);
+        Boolean submitCalon(Entity.EntCalon e);
+        Boolean updateCalon(Entity.EntCalon e);
+        
         String nomorBaru();
     }
 }

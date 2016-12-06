@@ -13,7 +13,7 @@ namespace FrmLogin.KoneksiDB
         public static SqlConnection getKoneksi()
         {
             koneksi = new SqlConnection();
-            koneksi.ConnectionString = "Data Source=XENOM_PC;Initial Catalog=db_pemilu9279;Integrated Security=True"; 
+            koneksi.ConnectionString = "Data Source=XENOM_PC;Initial Catalog=db_pemilu123;Integrated Security=True"; 
             return koneksi;
         }
     }

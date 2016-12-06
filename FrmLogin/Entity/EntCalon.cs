@@ -7,12 +7,11 @@ namespace FrmLogin.Entity
 {
     class EntCalon
     {
-        private int nomor;
+        private string nomor;
         private string nama;
         private string partai;
-        private string pict;
 
-        public void SetNomor(int nomor)
+        public void SetNomor(string nomor)
         {
             this.nomor = nomor;
         }
@@ -24,11 +23,7 @@ namespace FrmLogin.Entity
         {
             this.partai = partai;
         }
-        public void SetPict(string pict)
-        {
-            this.pict = pict;
-        }
-        public int getNomor()
+        public string getNomor()
         {
             return nomor;
         }
@@ -39,10 +34,6 @@ namespace FrmLogin.Entity
         public string getPartai()
         {
             return partai;
-        }
-        public string getPict()
-        {
-            return pict;
         }
     }
 }
